@@ -55,7 +55,7 @@ export function PopularOrganizers() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 md:grid-cols-3">
           {displayOrgs.map((org, i) => (
             <motion.div
               key={org.id}
@@ -63,7 +63,7 @@ export function PopularOrganizers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: i * 0.05 }}
-              className="group bg-card border border-border rounded-2xl p-5 hover:border-primary/30 hover:-translate-y-0.5 transition-all duration-200"
+              className="group h-full rounded-2xl border border-border bg-card p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30"
             >
               <div className="flex items-start gap-4">
                 {/* Avatar */}

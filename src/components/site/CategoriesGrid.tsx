@@ -25,11 +25,12 @@ export function CategoriesGrid() {
               color: "from-primary/10 to-primary/10 border-primary/10",
             };
             return (
-              <ScrollReveal key={cat} delay={i * 0.03} direction="up">
+              <ScrollReveal key={cat} delay={i * 0.03} direction="up" className="h-full">
                 <motion.div
                   whileHover={{ y: -4, scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="h-full"
                 >
                   <Link
                     to="/events"

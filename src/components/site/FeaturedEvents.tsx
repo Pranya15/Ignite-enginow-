@@ -99,16 +99,20 @@ export function FeaturedEvents() {
             </Link>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3">
             {displayEvents.map((event, i) => (
-              <ScrollReveal key={event.id} delay={i * 0.06} direction="up">
+              <ScrollReveal key={event.id} delay={i * 0.06} direction="up" className="h-full">
                 <motion.article
                   whileHover={{ y: -6, scale: 1.015 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                  className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 transition-all duration-300 shadow-sm dark:hover:shadow-[0_12px_36px_-10px_rgba(168,85,247,0.18)]"
+                  className="group relative h-full overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:border-primary/40 dark:hover:shadow-[0_12px_36px_-10px_rgba(168,85,247,0.18)]"
                 >
-                  <Link to="/events/$eventId" params={{ eventId: event.slug }} className="block">
+                  <Link
+                    to="/events/$eventId"
+                    params={{ eventId: event.slug }}
+                    className="flex h-full flex-col"
+                  >
                     <div className="relative aspect-video overflow-hidden">
                       <img
                         src={event.cover}
@@ -132,17 +136,17 @@ export function FeaturedEvents() {
                       )}
                     </div>
 
-                    <div className="p-6 flex flex-col gap-4">
+                    <div className="flex flex-1 flex-col gap-4 p-6">
                       <div className="flex items-start justify-between gap-4">
-                        <h3 className="font-display text-lg font-medium tracking-[-0.015em] group-hover:text-primary transition-colors">
+                        <h3 className="min-h-[3.5rem] font-display text-lg font-medium tracking-[-0.015em] transition-colors group-hover:text-primary">
                           {event.title}
                         </h3>
                         <span className="text-xs font-mono text-muted-foreground shrink-0 mt-1">
                           {event.dateLabel.split(",")[0]}
                         </span>
                       </div>
-                      <p className="text-sm text-muted-foreground line-clamp-2">{event.tagline}</p>
-                      <div className="flex items-center justify-between pt-4 border-t border-border">
+                      <p className="min-h-[2.5rem] line-clamp-2 text-sm text-muted-foreground">{event.tagline}</p>
+                      <div className="mt-auto flex items-center justify-between border-t border-border pt-4">
                         <div className="flex items-center gap-4 text-caption">
                           <span className="inline-flex items-center gap-1.5">
                             <MapPin className="size-3.5" /> {event.location}
