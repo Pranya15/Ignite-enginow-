@@ -1,0 +1,47 @@
+[
+  {
+    "id": "reg_1",
+    "eventId": "e-hk-1",
+    "eventTitle": "Quantum Hack 2026",
+    "eventDate": "Nov 13 – 15, 2026",
+    "eventLocation": "Bengaluru + Online",
+    "userId": "usr_student_1",
+    "userName": "Aarav Sharma",
+    "userEmail": "aarav.sharma@campus.edu",
+    "college": "Indian Institute of Technology (IIT)",
+    "registeredAt": "2026-10-10T14:30:00Z",
+    "status": "confirmed",
+    "ticketCode": "IGN-QNT-8812",
+    "seatNumber": "HACK-B04"
+  },
+  {
+    "id": "reg_2",
+    "eventId": "e-cf-1",
+    "eventTitle": "DevFest South 2026",
+    "eventDate": "Nov 28, 2026",
+    "eventLocation": "HICC Convention Centre, Hyderabad",
+    "userId": "usr_student_1",
+    "userName": "Aarav Sharma",
+    "userEmail": "aarav.sharma@campus.edu",
+    "college": "Indian Institute of Technology (IIT)",
+    "registeredAt": "2026-10-12T09:15:00Z",
+    "status": "attended",
+    "ticketCode": "IGN-AGT-1904",
+    "seatNumber": "GEN-114"
+  },
+  {
+    "id": "reg_3",
+    "eventId": "e-hk-1",
+    "eventTitle": "Quantum Hack 2026",
+    "eventDate": "Nov 13 – 15, 2026",
+    "eventLocation": "Bengaluru + Online",
+    "userId": "usr_student_2",
+    "userName": "Priya Sundaram",
+    "userEmail": "priya.s@tech.ac.in",
+    "college": "BITS Pilani",
+    "registeredAt": "2026-10-11T10:00:00Z",
+    "status": "confirmed",
+    "ticketCode": "IGN-QNT-9021",
+    "seatNumber": "HACK-B05"
+  }
+]
